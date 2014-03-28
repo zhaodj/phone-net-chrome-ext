@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+
+    "name": "网口电话插件",
+    "description": "网口电话插件",
+    "version": "1.0",
+
+    "app": {
+        "background": {
+            "scripts": ["background.js"]
+        }
+    },
+
+    "permissions": [
+        "experimental",
+        {"socket": [
+            "udp-send-to"
+        ]}
+    ],
+
+    "sockets": {
+        "udp":{
+            "send":["*"],
+            "bind":[":6060"]
+        }
+    },
+
+    "icons":{
+        "16":"telephone-16.png",
+        "128":"telephone-128.png"
+    }
+}
